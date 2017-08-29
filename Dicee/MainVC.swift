@@ -22,16 +22,23 @@ class MainVC: UIViewController {
     //lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDices()
+    }
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        updateDices()
     }
     
     //actions
     @IBAction func rollDices(_ sender: Any) {
+        updateDices()
+    }
+    
+    //custom
+    func updateDices(){
         indexDice1 = Int(arc4random_uniform(6))
         indexDice2 = Int(arc4random_uniform(6))
-        
         imgDice1.image =  UIImage(named: diceArray[indexDice1])
         imgDice2.image =  UIImage(named: diceArray[indexDice2])
     }
-
 }
 
