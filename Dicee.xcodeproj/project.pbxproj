@@ -302,6 +302,7 @@
 				A312CDB71F55EBDD001B1405 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
